@@ -11,6 +11,7 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Toast;
 
 import com.example.admin.livewallpaper.ListWallpaperActivity;
 import com.example.admin.livewallpaper.R;
@@ -87,7 +88,7 @@ public class CategoryFragment extends Fragment {
                     public void onClick(View view, int position) {
                         Common.CATEGORY_ID_SELECTED = adapter.getRef(position).getKey();
                         Common.CATEGORY_SELECTED = model.getName();
-                        Intent intent = new Intent(getContext(), ListWallpaperActivity.class);
+                        Intent intent = new Intent(getActivity(), ListWallpaperActivity.class);
                         startActivity(intent);
                     }
                 });

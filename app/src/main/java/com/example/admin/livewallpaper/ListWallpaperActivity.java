@@ -1,5 +1,6 @@
 package com.example.admin.livewallpaper;
 
+import android.content.Intent;
 import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -92,7 +93,9 @@ public class ListWallpaperActivity extends AppCompatActivity {
                 holder.setItemClickListener(new ItemClickListener() {
                     @Override
                     public void onClick(View view, int position) {
-                        Toast.makeText(ListWallpaperActivity.this, "Clicked", Toast.LENGTH_SHORT).show();
+                        Intent intent = new Intent(ListWallpaperActivity.this, ViewWallpaperActivity.class);
+                        Common.select_background = model;
+                        startActivity(intent);
                     }
                 });
             }

@@ -24,6 +24,7 @@ public class CategoryViewHolder extends RecyclerView.ViewHolder implements View.
 
         backgroundImage = (ImageView) itemView.findViewById(R.id.category_background_image);
         categoryName = (TextView) itemView.findViewById(R.id.category_name);
+        itemView.setOnClickListener(this);
     }
 
     @Override
